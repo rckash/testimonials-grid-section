@@ -21,8 +21,31 @@ html {
 
 main {
   font-family: "Barlow Semi Condensed", sans-serif;
-  padding: 6rem 2rem 4rem 2rem;
   background-color: var(--neutral-grayish-blue);
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  max-width: 1900px;
+}
+
+.my-grid {
+  padding: 6rem 2rem 4rem 2rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+
+@media (min-width: 1280px) {
+  .my-grid {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+    gap: 2rem;
+    padding: 10rem;
+    max-width: 1100px;
+  }
 }
 
 .card {
@@ -31,6 +54,14 @@ main {
   padding-bottom: 2.4rem;
   margin-bottom: 2rem;
   border-radius: 10px;
+  font-size: 1rem;
+}
+
+@media (min-width: 1280px) {
+  .card {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
 }
 
 .graduate-profile {
@@ -99,4 +130,22 @@ p {
 .white {
   background-color: var(--primary-white);
   color: var(--primary-blackish-blue);
+}
+
+@media (min-width: 1280px) {
+  .violet {
+    grid-area: daniel;
+  }
+  .gray {
+    grid-area: jonathan;
+  }
+  .black {
+    grid-area: patrick;
+  }
+  #kira-whittle {
+    grid-area: kira;
+  }
+  #jeanette-harmon {
+    grid-area: jeanette;
+  }
 }
