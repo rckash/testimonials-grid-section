@@ -19,12 +19,6 @@ html {
   --neutral-grayish-blue: hsl(210, 46%, 95%);
 }
 
-/* 1. "Verified Graduate" has the same color as the person's name with 50% opacity
-2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
-
-/* - Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
-- Weights: 500, 600 */
-
 main {
   font-family: "Barlow Semi Condensed", sans-serif;
   padding: 6rem 2rem 4rem 2rem;
@@ -33,13 +27,63 @@ main {
 
 .card {
   background-color: var(--primary-white);
-  padding: 1.8rem;
+  padding: 2rem;
+  padding-bottom: 2.4rem;
   margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.graduate-profile {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.graduate-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  border-radius: 50%;
+  border: 3px solid hsla(0, 0%, 100%, 0.5);
+  height: 2.6rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 50%;
+}
+
+p {
+  padding-top: 1.4rem;
+}
+
+.highlight {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  line-height: 1.8rem;
+}
+
+.quote {
+  opacity: 70%;
+  line-height: 1.6rem;
 }
 
 .violet {
   background-color: var(--primary-violet);
   color: var(--primary-white);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 0;
 }
 
 .gray {
